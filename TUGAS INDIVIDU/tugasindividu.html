@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/boxicons@latest/css/boxicons.min.css"
+    />
+    <link rel="stylesheet" href="style6.css" />
+    <title>Login Form</title>
+    <script type="text/javascript"></script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <h2>Welcome</h2>
+      <form action="#" method="post" onsubmit="return validasi()">
+        <div class="input-fielt">
+          <input type="email"  id="email" placeholder="Username"/>
+          <i class="bx bxs-user"></i>
+        </div>
+        <div class="input-fielt">
+          <input
+            type="password"
+            id="password"
+            placeholder="Password"
+        
+          />
+          <i class="bx bxs-lock-alt"></i>
+        </div>
+        <a href="#" class="forgot">
+          <p>forgot password</p>
+        </a>
+        <input type="submit" value="Login" />
+      </form>
+      <p>
+        Don't have an account?
+        <input
+          style="background: none; border: none; color: white"
+          type="submit"
+          ondblclick="prompt('Masukkan nama anda!')"
+          value="sign-up"
+        />
+      </p>
+    </div>
+
+    <script>
+      function validasi() {
+        var email = document.getElementById("email").value;
+        var pass = document.getElementById("password").value;
+
+        if ((email == "")) {
+          alert("Email wajib diisi");
+          return false;
+        }
+        if ((pass == "")) {
+          alert("Wajib isi Password");
+          return false;
+        }
+
+        return true;
+      }
+    </script>
+    <script src="https://unpkg.com/boxicons@2.1.3/dist/boxicons.js"></script>
+  </body>
+</html>
